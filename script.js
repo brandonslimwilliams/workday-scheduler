@@ -3,7 +3,7 @@ $("#currentDay").html(date);
 
 $(document).ready(function () {
   //click listener for button
-  $(".saveB").on("click", function (event) {
+  $(".saveB").on("click", function () {
     //define text and time variables
     var text = $(this).siblings("planning").val();
     var time = $(this).parent().attr("id");
@@ -37,6 +37,15 @@ function currentTime() {
 }
 
 //get Items from localStorage 
+$("#hour-9 .planning").val(localStorage.getItem("hour-9"));
+$("#hour-10 .planning").val(localStorage.getItem("hour-10"));
+$("#hour-11 .planning").val(localStorage.getItem("hour-11"));
+$("#hour-12 .planning").val(localStorage.getItem("hour-12"));
+$("#hour-13 .planning").val(localStorage.getItem("hour-13"));
+$("#hour-14 .planning").val(localStorage.getItem("hour-14"));
+$("#hour-15 .planning").val(localStorage.getItem("hour-15"));
+$("#hour-16 .planning").val(localStorage.getItem("hour-16"));
+$("#hour-17 .planning").val(localStorage.getItem("hour-17"));
 
 currentTime();
 })
